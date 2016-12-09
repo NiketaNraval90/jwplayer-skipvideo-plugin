@@ -1,13 +1,16 @@
 # jwplayer-skipvideo-plugin
 This plugin simply provide to skip video while playing video on jwplayer after specified time in seconds
 
-#Requirement 
+#Requirement Dependecies
 Jwplayer library
 #Configucation
 
-#HTMl
-<div id="myDiv">Video</div>
-#Javascript
+HTML
+----
+<pre><div id="myDiv">Video</div></pre>
+Javascript
+----------
+```javascript
 jwplayer("myDiv").setup({
     file: "your_localvideo_file.mp4",
     provider: "video",    
@@ -20,3 +23,4 @@ jwplayer("myDiv").setup({
         }
     }
 });
+```
