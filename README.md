@@ -7,7 +7,9 @@ Jwplayer library
 
 HTML
 ----
-<pre><div id="myDiv">Video</div></pre>
+```html
+<div id="myDiv">Video</div>
+```
 Javascript
 ----------
 ```javascript
