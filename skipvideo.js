@@ -23,9 +23,10 @@
             var text = document.createTextNode('Skip Video');
             link.appendChild(text);
             link.addEventListener('click', function () {
-                if (typeof config.click === 'function') {            
-                    config.click();
+                if (typeof config.click === 'function') {                      
                     div.style.display = 'none';
+                    player.play();                    
+                    config.click();
                 }
                 else
                     console.info('Function Not Found');
@@ -35,7 +36,7 @@
         }
 
         player.on('time', function (evn) {
-            if (evn.position > config.time && div.style.display == 'none') {
+            if (parseInt(evn.position) == config.time && div.style.display == 'none') {
                 div.style.display = 'block';
             }
         })
