@@ -23,8 +23,10 @@
             var text = document.createTextNode('Skip Video');
             link.appendChild(text);
             link.addEventListener('click', function () {
-                if (typeof config.click === 'function')                     
+                if (typeof config.click === 'function') {            
                     config.click();
+                    div.style.display = 'none';
+                }
                 else
                     console.info('Function Not Found');
             });
